@@ -1,0 +1,13 @@
+<li><%= context_menu_link(t('Spam'),
+                          bulk_update_issues_path(
+                            :ids => @issue_ids,
+                            :issue => {:status_id => Setting.plugin_redmine_mark_spam['issues_status_spam'],
+                                       :assigned_to_id => User.current,
+                                       :notes => t('closed_as_spam'),
+                                       :done_ratio => 100},
+                            :back_url => @back
+                          ),
+                          :method => :post,
+                          :class => 'icon icon-warning',
+                          :disabled => !@can[:edit]
+        ) %></li>

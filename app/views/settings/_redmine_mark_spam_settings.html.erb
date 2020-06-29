@@ -1,0 +1,14 @@
+<table>
+  <tbody>
+    <tr>
+      <th>Close spam with status</th>
+      <td>
+        <select id="settings_issues_status_spam" name="settings[issues_status_spam]">
+          <% IssueStatus.find_each do |s| -%>
+            <option value="<%= s.id %>"><%= s.name %></option>
+          <% end -%>
+        </select>
+      </td>
+    </tr>
+  </tbody>
+</table>
