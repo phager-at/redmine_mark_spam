@@ -3,3 +3,5 @@ de:
   # my_label: "My label"
   Spam: "Markiere als Spam"
   closed_as_spam: "Spam --> geschlossen"
+  Close_out_of_date: "Schließe veraltet"
+  closed_as_out_of_date: "Neueres Ticket geprüft --> resolved"

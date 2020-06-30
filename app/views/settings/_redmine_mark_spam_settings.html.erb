@@ -3,9 +3,21 @@
     <tr>
       <th>Close spam with status</th>
       <td>
-        <select id="settings_issues_status_spam" name="settings[issues_status_spam]">
+        <select id="settings_issues_status_spam" name="settings[issues_status_spam]" required>
+          <option value=""></option>
           <% IssueStatus.find_each do |s| -%>
-            <option value="<%= s.id %>"><%= s.name %></option>
+            <option value="<%= s.id %>" <%= Setting.plugin_redmine_mark_spam['issues_status_spam'].to_i == s.id ? "selected" : "" %>><%= s.name %></option>
+          <% end -%>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>Close outdated tickets with status</th>
+      <td>
+        <select id="settings_issues_status_outdated" name="settings[issues_status_outdated]" required>
+          <option value=""></option>
+          <% IssueStatus.find_each do |s| -%>
+            <option value="<%= s.id %>" <%= Setting.plugin_redmine_mark_spam['issues_status_outdated'].to_i == s.id ? "selected" : "" %>><%= s.name %></option>
           <% end -%>
         </select>
       </td>
