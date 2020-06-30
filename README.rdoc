@@ -1,3 +1,7 @@
-= edaktik_helpers
+= Redmine Mark Spam 
 
-Description goes here
+This little plugin provides context menu options to mark multiple tickets as
+spam or as outdated tickets (i.e. Monitoring Tickets which can be replaced by a newer ticket).
+
+It sets them to 100%, assigns the current user,
+changes status to a status which can be set in configuration and adds a standardized comment!
